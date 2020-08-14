@@ -1,0 +1,5 @@
+for (node in Jenkins.instance.nodes) {
+  println "${node.name}, ${node.numExecutors}"
+  def computer = node.computer
+  println "Online: ${computer.online}, ${computer.connectTime} (${computer.offlineCauseReason})" 
+}
